@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="search">
+        <div class="icon" onclick="show_now();"></div>
+        <div class="input">
+            <input type="text" placeholder="Search" id="mysearch">
+        </div>
+        <span class="clear" onclick="document.getElementById('mysearch').value = '' "></span>
+    </div>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <img src="logo.png" class="logo" alt="">
+            </div>
+            <div class="profile-container">
+                <img class="profile-picture" src="profile.jpg" onclick="menuToggle();" alt="">
+                <div class="profile-text-container">
+                    <span class="profile-text" onclick="menuToggle();">Profile</span>
+                    <i class="fas fa-caret-down" onclick="menuToggle();"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <i class="sidebar-icons fas fa-home" onclick="location.href = 'index.html';"></i>
+        <i class="sidebar-icons fas fa-film"></i>
+        <i class="sidebar-icons fas fa-tv"></i>
+        <i class="sidebar-icons fas fa-search" onclick="show_now();"></i>
+    </div>
+    <div class="container" id="myElement">
+        <div class="menu">
+            <ul class="ul">
+            <li class="li"><img src="user.png" class="user-img" alt=""><a href="#" class="user-txt">My Profile</a></li>
+            <li class="li"><img src="edit.png" class="user-img" alt=""><a href="#" class="user-txt">Edit Profile</a></li>
+            <li class="li"><img src="mail.png" class="user-img" alt=""><a href="#" class="user-txt">Inbox</a></li>
+            <li class="li"><img src="settings.png" class="user-img" alt=""><a href="#" class="user-txt">Settings</a></li>
+            <li class="li"><img src="logout.png" class="user-img" alt=""><a href="#" class="user-txt">Logout</a></li>
+            </ul>
+        </div>
+        <div class="content-container">
+            <div class="featured-container-wrapper">
+                <i class="fas fa-chevron-right featured-arrow" onclick="plusSlides(1)"></i>
+                <div class="featured-container fade">
+                    <img class="featured-title" src="dune.jpg" onclick="location.href = 'dune.html';" alt="">
+                    <h1 class="featured-title-name">DUNE</h1>
+                    <h4 class="featured-title-genre">2021 Sci-fi/Adventure 2h35m</h4>
+                    <span class="featured-title-rating">IMDB-8.3/10</span>
+                    <p class="featured-title-desc">A mythic and emotionally charged hero's journey, "Dune" tells the story of Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, who must travel to the most dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet's exclusive supply of the most precious resource in existence-a commodity capable of unlocking humanity's greatest potential-only those who can conquer their fear will survive.</p>
+                    <h5 class="featured-director">Director:  Denis Villeneuve</h5>
+                    <i class="watchlist-icon fas fa-plus"></i>
+                    <span class="add-to-watchlist">Add to watchlist</span>
+                </div>
+                <div class="featured-container">
+                    <img class="featured-title" src="shawshank.jpg" alt="" onclick="location.href = 'shawshank.html';">
+                    <h1 class="featured-title-name">THE SHAWSHANK REDEMPTION</h1>
+                    <h4 class="featured-title-genre">1994 Drama/Crime 2h22m</h4>
+                    <span class="featured-title-rating">IMDB-9.3/10</span>
+                    <p class="featured-title-desc">Chronicles the experiences of a formerly successful banker as a prisoner in the gloomy jailhouse of Shawshank after being found guilty of a crime he did not commit. The film portrays the man's unique way of dealing with his new, torturous life; along the way he befriends a number of fellow prisoners, most notably a wise long-term inmate named Red.</p>
+                    <h5 class="featured-director">Director:  Frank Darabont</h5>
+                    <i class="watchlist-icon fas fa-plus"></i>
+                    <span class="add-to-watchlist">Add to watchlist</span>
+                </div>
+                <div class="featured-container">
+                    <img class="featured-title" src="interstellar.jpg" alt="" onclick="location.href = 'interstellar.html';">
+                    <h1 class="featured-title-name">INTERSTELLAR</h1>
+                    <h4 class="featured-title-genre">2014 Sci-fi/Adventure 2h49m</h4>
+                    <span class="featured-title-rating">IMDB-8.6/10</span>
+                    <p class="featured-title-desc">Earth's future has been riddled by disasters, famines, and droughts. There is only one way to ensure mankind's survival: Interstellar travel. A newly discovered wormhole in the far reaches of our solar system allows a team of astronauts to go where no man has gone before, a planet that may have the right environment to sustain human life.</p>
+                    <h5 class="featured-director">Director:  Christofer Nolan</h5>
+                    <i class="watchlist-icon fas fa-plus"></i>
+                    <span class="add-to-watchlist">Add to watchlist</span>
+                </div>
+                <div class="featured-container">
+                    <img class="featured-title" src="naruto.jpg" alt="" onclick="location.href = 'naruto.html';">
+                    <h1 class="featured-title-name">NARUTO</h1>
+                    <h4 class="featured-title-genre">2002 Anime Series</h4>
+                    <span class="featured-title-rating">IMDB-8.3/10</span>
+                    <p class="featured-title-desc">Many years ago, in the hidden village of Konoha, lived a great demon fox. When it swung one of it's nine tails, a tsunami occurred. The fourth hokage sealed this demon fox inside a boy in exchange for his own life. Naruto was that boy, and he grew up with no family, and the villagers hated him thinking that he himself was the demon fox. Naruto's dream is to become Hokage, and have the villagers acknowledge him.</p>
+                    <h5 class="featured-director">Director:  Masashi Kishimoto(original manga)</h5>
+                    <i class="watchlist-icon fas fa-plus"></i>
+                    <span class="add-to-watchlist">Add to watchlist</span>
+                </div>
+            </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">TOP PICKS</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="dune.jpg" onclick="location.href = 'dune.html';" alt="">
+                            <span class="movie-list-item-name">DUNE</span>
+                            <p class="movie-list-item-desc">IMDB 8.2/10 2021 ‧ Sci-fi/Adventure ‧ 2h 35m</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'dune.html';">DETAILS</button> 
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="shawshank.jpg" alt="">
+                            <span class="movie-list-item-name">SHAWSHANK REDEMPTION</span>
+                            <p class="movie-list-item-desc">IMDB 9.3/10 1994 ‧ Drama/Crime ‧ 2h 22m</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'shawshank.html';">DETAILS</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="breaking.jpg" alt="">
+                            <span class="movie-list-item-name">BREAKING BAD</span>
+                            <p class="movie-list-item-desc">IMDB 9.4/10 2008 ‧ Drama ‧ 5 seasons</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'bb.html';">DETAILS</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="money.jpg" alt="">
+                            <span class="movie-list-item-name">MONEY HEIST</span>
+                            <p class="movie-list-item-desc">IMDB 8.2/10 2017 ‧ Thriller ‧ 5 seasons</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'money.html';">DETAILS</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="got.jpg" alt="">
+                            <span class="movie-list-item-name">GAME OF THRONES</span>
+                            <p class="movie-list-item-desc">IMDB 9.2/10 2011 ‧ Drama ‧ 8 seasons</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'got.html';">DETAILS</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="joker.jpg" alt="">
+                            <span class="movie-list-item-name">JOKER</span>
+                            <p class="movie-list-item-desc">IMDB 8.4 2019 ‧ Crime/Drama ‧ 2h 2m</p>
+                            <button class="movie-list-item-button">DETAILS</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="bahubali.jpg" alt="">
+                            <span class="movie-list-item-name">BAHUBALI THE BEGINNING</span>
+                            <p class="movie-list-item-desc">IMDB 8/10 2015 ‧ Action/War ‧ 2h 38m</p>
+                            <button class="movie-list-item-button">DETAILS</button>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">NEW REALESES</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="spider.jpg" alt="">
+                            <span class="movie-list-item-name">SPIDER MAN NO WAY HOME</span>
+                            <p class="movie-list-item-desc">2021 ‧ Action/Adventure ‧ 2h 28m</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'spider.html';">DETAILS</button> 
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="pushpa.jpeg" alt="">
+                            <span class="movie-list-item-name">PUSHPA: THE RISE</span>
+                            <p class="movie-list-item-desc">2021 ‧ Action/Drama ‧ 2h 30m</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'pushpa.html';">DETAILS</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="dhamaka.jpg" alt="">
+                            <span class="movie-list-item-name">DHAMAKA</span>
+                            <p class="movie-list-item-desc">IMDB 7.6/10 2021 ‧ Action/Thriller ‧ 1h 44m</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'dhamaka.html';">DETAILS</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="dune.jpg" onclick="location.href = 'dune.html';" alt="">
+                            <span class="movie-list-item-name">DUNE</span>
+                            <p class="movie-list-item-desc">IMDB 8.2/10 2021 ‧ Sci-fi/Adventure ‧ 2h 35m</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'dune.html';">DETAILS</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="wheel.jpeg" alt="">
+                            <span class="movie-list-item-name">THE WHEEL OF TIME</span>
+                            <p class="movie-list-item-desc">IMDB 7.5/10 2021 ‧ Fantasy television ‧ 1 season</p>
+                            <button class="movie-list-item-button">DETAILS</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="titans.jpg" alt="">
+                            <span class="movie-list-item-name">TITANES</span>
+                            <p class="movie-list-item-desc">IMDB 7.6/10 2018 ‧ Action fiction ‧ 3 seasons</p>
+                            <button class="movie-list-item-button">DETAILS</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="hellbound.jpg" alt="">
+                            <span class="movie-list-item-name">HELLBOUND</span>
+                            <p class="movie-list-item-desc">IMDB 6.7/10 2021 ‧ Drama ‧ 1 season</p>
+                            <button class="movie-list-item-button">DETAILS</button>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">TV SERIES</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="money.jpg" alt="">
+                            <span class="movie-list-item-name">MONEY HEIST</span>
+                            <p class="movie-list-item-desc">IMDB 8.2/10 2017 ‧ Thriller ‧ 5 seasons</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'money.html';">DETAILS</button> 
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="hellbound.jpg" alt="">
+                            <span class="movie-list-item-name">HELLBOUND</span>
+                            <p class="movie-list-item-desc">IMDB 6.7/10 2021 ‧ Drama ‧ 1 season</p>
+                            <button class="movie-list-item-button">DETAILS</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="got.jpg" alt="">
+                            <span class="movie-list-item-name">GAME OF THRONES</span>
+                            <p class="movie-list-item-desc">IMDB 9.2/10 2011 ‧ Drama ‧ 8 seasons</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'got.html';">DETAILS</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="breaking.jpg" alt="">
+                            <span class="movie-list-item-name">BREAKING BAD</span>
+                            <p class="movie-list-item-desc">IMDB 9.4/10 2008 ‧ Drama ‧ 5 seasons</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'bb.html';">DETAILS</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="dark.png" alt="">
+                            <span class="movie-list-item-name">DARK</span>
+                            <p class="movie-list-item-desc">IMDB 8.8 2017 ‧ Sci-fi ‧ 3 seasons</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'dark.html';">DETAILS</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="lucifer.jpg" alt="">
+                            <span class="movie-list-item-name">LUCIFER</span>
+                            <p class="movie-list-item-desc">IMDB 8.1/10 2016 ‧ Mystery ‧ 6 seasons</p>
+                            <button class="movie-list-item-button">DETAILS</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="squid.jpg" alt="">
+                            <span class="movie-list-item-name">SQUID GAMES</span>
+                            <p class="movie-list-item-desc">IMDB 8/10 2021 ‧ Drama ‧ 1 season</p>
+                            <button class="movie-list-item-button">DETAILS</button>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">ANIME</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="naruto.jpg" alt="">
+                            <span class="movie-list-item-name">NARUTO</span>
+                            <p class="movie-list-item-desc">IMDB 8.3/10 2002 ‧ Action fiction ‧ 9 seasons</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'naruto.html';">DETAILS</button> 
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="your.jpg" alt="">
+                            <span class="movie-list-item-name">YOUR NAME</span>
+                            <p class="movie-list-item-desc">IMDB 8.4/10 2016 ‧ Romance/Fantasy ‧ 1h 52m</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'your.html';">DETAILS</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="tokyo.jpg" alt="">
+                            <span class="movie-list-item-name">TOKYO GHOUL</span>
+                            <p class="movie-list-item-desc">IMDB 7.8/10 2014 ‧ Horror ‧ 2 seasons</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'tokyo.html';">DETAILS</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="pancreas.jpg" alt="">
+                            <span class="movie-list-item-name">I WANT TO EAT YOUR PANCREAS</span>
+                            <p class="movie-list-item-desc">IMDB 8.1/10 2018 ‧ Romance/Drama ‧ 1h 48m</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'pancreas.html';">DETAILS</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="silent.jpg" alt="">
+                            <span class="movie-list-item-name">A SILENT VOICE</span>
+                            <p class="movie-list-item-desc">IMDB 8.2/10 2016 ‧ Romance/Drama ‧ 2h 9m</p>
+                            <button class="movie-list-item-button">DETAILS</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="spiritid.jpg" alt="">
+                            <span class="movie-list-item-name">SPIRITED AWAY</span>
+                            <p class="movie-list-item-desc">IMDB 8.6/10 2001 ‧ Fantasy/Adventure ‧ 2h 4m</p>
+                            <button class="movie-list-item-button">DETAILS</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="dragon.jpeg" alt="">
+                            <span class="movie-list-item-name">DRAGON BALL Z</span>
+                            <p class="movie-list-item-desc">IMDB 8.7/10 1989 ‧ Action ‧ 9 seasons</p>
+                            <button class="movie-list-item-button">DETAILS</button>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

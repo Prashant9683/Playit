@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="spider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="search">
+        <div class="icon" onclick="show_now();"></div>
+        <div class="input">
+            <input type="text" placeholder="Search" id="mysearch">
+        </div>
+        <span class="clear" onclick="document.getElementById('mysearch').value = '' "></span>
+    </div>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <img src="logo.png" class="logo" alt="">
+            </div>
+            <div class="profile-container">
+                <img class="profile-picture" src="profile.jpg" onclick="menuToggle();" alt="">
+                <div class="profile-text-container">
+                    <span class="profile-text" onclick="menuToggle();">Profile</span>
+                    <i class="fas fa-caret-down" onclick="menuToggle();"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <i class="sidebar-icons fas fa-home" onclick="location.href = 'index.html';"></i>
+        <i class="sidebar-icons fas fa-film"></i>
+        <i class="sidebar-icons fas fa-tv"></i>
+        <i class="sidebar-icons fas fa-search" onclick="show_now();"></i>
+    </div>
+    <div class="container" id="myElement">
+        <div class="menu">
+            <ul class="ul">
+            <li class="li"><img src="user.png" class="user-img" alt=""><a href="#" class="user-txt">My Profile</a></li>
+            <li class="li"><img src="edit.png" class="user-img" alt=""><a href="#" class="user-txt">Edit Profile</a></li>
+            <li class="li"><img src="mail.png" class="user-img" alt=""><a href="#" class="user-txt">Inbox</a></li>
+            <li class="li"><img src="settings.png" class="user-img" alt=""><a href="#" class="user-txt">Settings</a></li>
+            <li class="li"><img src="logout.png" class="user-img" alt=""><a href="#" class="user-txt">Logout</a></li>
+            </ul>
+        </div>
+        <div class="movie-container">
+            <div class="coloumn movie-container-wrapper">
+                <h1 class="movie-name">SPIDER-MAN : NO WAY HOME</h1>
+                <p class="movie-rating">IMDB 9/10 2021 ‧ Action/Adventure ‧ 2h 28m</p>
+                <p class="movie-desc">With Spider-Man's identity now revealed, our friendly neighborhood web-slinger is unmasked and no longer able to separate his normal life as Peter Parker from the high stakes of being a superhero. When Peter asks for help from Doctor Strange, the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.</p>
+                <p class="cast">Cast: </p>
+                <div class="movie-casting">
+                    <img src="tomh.jpg" class="cast-img" title="Tom Holland" alt="">
+                    <img src="tobey.jpg" class="cast-img1" title="Tobey Maguire" alt="">
+                    <img src="andrew.jpg" class="cast-img1" title="Andrew Garfield" alt="">
+                    <img src="zendaya.jpg" class="cast-img1" title="Zendaya" alt="">
+                </div>
+                <p class="platforms-text">Streaming Platforms : </p>
+                <div class="platforms">
+                    <p class="movie-rating">Sorry, This content is not streaming on any platform in your location.</p>
+                    <!-- <img src="netflix.jpg" class="platform-img" title="Netflix" alt="">
+                    <img src="prime.jpg" class="platform-img1" title="Prime Video" alt=""> -->
+                </div>
+            </div>
+            <div class="coloumn movie-item-img-wrapper">
+                <img src="spider2.jpg" class="movie-item-img" alt="">
+            </div>
+        </div>
+        <div class="suggestion-container">
+            <div class="suggestion-container-wrapper">
+                <h3 class="suggestion-txt">Suggestions for you</h3>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="got2.jpg" alt="">
+                            <span class="movie-list-item-name">GAME OF THRONES</span>
+                            <p class="movie-list-item-desc">IMDB 9.2/10 2011 ‧ Drama ‧ 8 seasons</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'got.html';">DETAILS</button> 
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="tokyo2.jpg" alt="">
+                            <span class="movie-list-item-name">TOKYO GHOUL</span>
+                            <p class="movie-list-item-desc">IMDB 7.8/10 2014 ‧ Horror ‧ 2 seasons</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'tokyo.html';">DETAILS</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="dark2.jpg" alt="">
+                            <span class="movie-list-item-name">DARK</span>
+                            <p class="movie-list-item-desc">IMDB 8.8 2017 ‧ Sci-fi ‧ 3 seasons</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'dark.html';">DETAILS</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="Interstellar2.jpg" alt="">
+                            <span class="movie-list-item-name">INTERSTELLAR</span>
+                            <p class="movie-list-item-desc">IMDB 8.6/10 2014 Sci-fi/Adventure 2h49m</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'interstellar.html';">DETAILS</button> 
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="breaking2.jpg" alt="">
+                            <span class="movie-list-item-name">BREAKING BAD</span>
+                            <p class="movie-list-item-desc">IMDB 9.4/10 2008 ‧ Drama ‧ 5 seasons</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'bb.html';">DETAILS</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="money2.jpg" alt="">
+                            <span class="movie-list-item-name">Money Heist</span>
+                            <p class="movie-list-item-desc">IMDB 8.2/10 2017 ‧ Thriller ‧ 5 seasons</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'money.html';">DETAILS</button>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="dune.js"></script>
+</body>
+</html>
