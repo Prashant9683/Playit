@@ -200,8 +200,8 @@ html {
    margin-top: 25%;
    margin-left: 25%;
    align-items: center;
-   height: 330px;
    width: 240px;
+   height: 370px;
    border-radius: 20px;
   }
   
@@ -243,24 +243,25 @@ html {
   } */
   
   .movie-list-wrapper {
-   position: relative;
-   overflow: hidden;
-  }
-  
-  .movie-list-item-title {
-   border-radius: 20px;
-   transition: all 1s ease-in-out;
-   width: 240px;
-   height: 340px;
-   object-fit: cover;
-  }
-  
-  .movie-list {
-   display: flex;
-   height: 300px;
-   transform: translateX(0);
-   transition: all 1s ease-in-out;
-  }
+    position: relative;
+    overflow: hidden;
+    height: 400px
+   }
+   
+   .movie-list-item-title {
+    border-radius: 20px;
+    transition: all 1s ease-in-out;
+    width: 240px;
+    height: 370px;
+    object-fit: cover;
+   }
+   
+   .movie-list {
+    display: flex;
+    height: 400px;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+   }
   
   .movie-list-item {
    margin-left: 50px;
