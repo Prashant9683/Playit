@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="movies.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="search">
+        <div class="icon" onclick="show_now();"></div>
+        <div class="input">
+            <input type="text" placeholder="Search" id="mysearch">
+        </div>
+        <span class="clear" onclick="document.getElementById('mysearch').value = '' "></span>
+    </div>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <img src="icon/logo.png" class="logo" alt="">
+            </div>
+            <div class="profile-container">
+                <img class="profile-picture" src="icon/profile.jpg" onclick="menuToggle();" alt="">
+                <div class="profile-text-container">
+                    <span class="profile-text" onclick="menuToggle();">Profile</span>
+                    <i class="fas fa-caret-down" onclick="menuToggle();"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <i class="sidebar-icons fas fa-home" onclick="location.href = 'index.html';"></i>
+        <i class="sidebar-icons fas fa-film" onclick="location.href = 'movies.html';"></i>
+        <i class="sidebar-icons fas fa-tv" onclick="location.href = 'tv.html';"></i>
+        <i class="sidebar-icons fas fa-search" onclick="show_now();"></i>
+    </div>
+    <div class="container" id="myElement">
+        <div class="menu">
+            <ul class="ul">
+            <li class="li"><img src="icon/user.png" class="user-img" alt=""><a href="#" class="user-txt">My Profile</a></li>
+            <li class="li"><img src="icon/edit.png" class="user-img" alt=""><a href="#" class="user-txt">Edit Profile</a></li>
+            <li class="li"><img src="icon/mail.png" class="user-img" alt=""><a href="#" class="user-txt">Inbox</a></li>
+            <li class="li"><img src="icon/settings.png" class="user-img" alt=""><a href="#" class="user-txt">Settings</a></li>
+            <li class="li"><img src="icon/logout.png" class="user-img" alt=""><a href="#" class="user-txt">Logout</a></li>
+            </ul>
+        </div>
+        <div class="suggestion-container">
+            <div class="suggestion-container-wrapper">
+                <!-- <h3 class="suggestion-txt">Suggestions for you</h3> -->
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="img/breaking2.jpg" alt="">
+                            <span class="movie-list-item-name">BREAKING BAD</span>
+                            <p class="movie-list-item-desc">IMDB 9.4/10 2008 ‧ Drama ‧ 5 seasons</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'bb.html';">DETAILS</button> 
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="img/got2.jpg" alt="">
+                            <span class="movie-list-item-name">GAME OF THRONES</span>
+                            <p class="movie-list-item-desc">IMDB 9.2/10 2011 ‧ Drama ‧ 8 seasons</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'got.html';">DETAILS</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="img/squid2.jpg" alt="">
+                            <span class="movie-list-item-name">SQUID GAMES</span>
+                            <p class="movie-list-item-desc">IMDB 8/10 2021 ‧ Drama ‧ 1 season</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'squid.html';">DETAILS</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="img/witcher2.jpg" alt="">
+                            <span class="movie-list-item-name">THE WITCHER</span>
+                            <p class="movie-list-item-desc">IMDB 8.2/10 2019 ‧ Fantasy ‧ 2 seasons</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'witcher.html';">DETAILS</button> 
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="img/tokyo2.jpg" alt="">
+                            <span class="movie-list-item-name">TOKYO GHOUL</span>
+                            <p class="movie-list-item-desc">IMDB 7.8/10 2014 ‧ Horror ‧ 2 seasons</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'tokyo.html';">DETAILS</button>
+                        </div>
+                        <!-- <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="img/money2.jpg" alt="">
+                            <span class="movie-list-item-name">Money Heist</span>
+                            <p class="movie-list-item-desc">IMDB 8.2/10 2017 ‧ Thriller ‧ 5 seasons</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'money.html';">DETAILS</button>
+                        </div> -->
+                    </div>
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="img/locke2.jpg" alt="">
+                            <span class="movie-list-item-name">LOCKE & KEY</span>
+                            <p class="movie-list-item-desc">IMDB 7.4/10 2020 ‧ Drama ‧ 2 seasons</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'locke.html';">DETAILS</button> 
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="img/stranger2.jpg" alt="">
+                            <span class="movie-list-item-name">STRANGER THINGS</span>
+                            <p class="movie-list-item-desc">IMDB 8.7/10 2016 ‧ Sci-fi ‧ 3 seasons</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'stranger.html';">DETAILS</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="img/dark2.jpg" alt="">
+                            <span class="movie-list-item-name">DARK</span>
+                            <p class="movie-list-item-desc">IMDB 8.8 2017 ‧ Sci-fi ‧ 3 seasons</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'dark.html';">DETAILS</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="img/naruto2.jpg" alt="">
+                            <span class="movie-list-item-name">NARUTO</span>
+                            <p class="movie-list-item-desc">IMDB 8.3/10 2002 ‧ Action fiction ‧ 9 seasons</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'naruto.html';">DETAILS</button> 
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="img/lucifer2.jpg" alt="">
+                            <span class="movie-list-item-name">LUCIFER</span>
+                            <p class="movie-list-item-desc">IMDB 8.1/10 2016 ‧ Mystery ‧ 6 seasons</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'lucifer.html';">DETAILS</button>
+                        </div>
+                        <!-- <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="img/money2.jpg" alt="">
+                            <span class="movie-list-item-name">Money Heist</span>
+                            <p class="movie-list-item-desc">IMDB 8.2/10 2017 ‧ Thriller ‧ 5 seasons</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'money.html';">DETAILS</button>
+                        </div> -->
+                    </div>
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="img/hellbound2.jpg" alt="">
+                            <span class="movie-list-item-name">HELLBOUND</span>
+                            <p class="movie-list-item-desc">IMDB 6.7/10 2021 ‧ Drama ‧ 1 season</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'hellbound.html';">DETAILS</button> 
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="img/money2.jpg" alt="">
+                            <span class="movie-list-item-name">MONEY HEIST</span>
+                            <p class="movie-list-item-desc">IMDB 8.2/10 2017 ‧ Thriller ‧ 5 seasons</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'money.html';">DETAILS</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="img/kota2.jpg" alt="">
+                            <span class="movie-list-item-name">KOTA FACTORY</span>
+                            <p class="movie-list-item-desc">IMDB 9.2/10 2019 ‧ Comedy ‧ 2 seasons</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'kota.html';">DETAILS</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="img/walking2.jpg" alt="">
+                            <span class="movie-list-item-name">THE WALKING DEAD</span>
+                            <p class="movie-list-item-desc">IMDB 8.2/10 2010 ‧ Horror ‧ 10 seasons</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'walking.html';">DETAILS</button> 
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="img/wheel2.jpg" alt="">
+                            <span class="movie-list-item-name">THE WHEEL OF TIME</span>
+                            <p class="movie-list-item-desc">IMDB 7.5/10 2021 ‧ Fantasy television ‧ 1 season</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'wheel.html';">DETAILS</button>
+                        </div>
+                        <!-- <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="img/money2.jpg" alt="">
+                            <span class="movie-list-item-name">Money Heist</span>
+                            <p class="movie-list-item-desc">IMDB 8.2/10 2017 ‧ Thriller ‧ 5 seasons</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'money.html';">DETAILS</button>
+                        </div> -->
+                    </div>
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="img/friends2.jpg" alt="">
+                            <span class="movie-list-item-name">F.R.I.E.N.D.S</span>
+                            <p class="movie-list-item-desc">IMDB 8.8/10 1994 ‧ Sitcom ‧ 10 seasons</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'friends.html';">DETAILS</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="img/tbbt2.jpg" alt="">
+                            <span class="movie-list-item-name">THE BIG BANG THEORY</span>
+                            <p class="movie-list-item-desc">IMDB 8.1/10 2007 ‧ Sitcom ‧ 12 seasons</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'tbbt.html';">DETAILS</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="img/office2.jpg" alt="">
+                            <span class="movie-list-item-name">THE OFFICE</span>
+                            <p class="movie-list-item-desc">IMDB 8.9/10 2005 ‧ Sitcom ‧ 9 seasons</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'office.html';">DETAILS</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="img/breathe2.jpg" alt="">
+                            <span class="movie-list-item-name">BREATHE</span>
+                            <p class="movie-list-item-desc">IMDB 8.3/10 2018 ‧ Thriller ‧ 1 season</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'breathe.html';">DETAILS</button> 
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="img/rick2.jpg" alt="">
+                            <span class="movie-list-item-name">RICK AND MORTY</span>
+                            <p class="movie-list-item-desc">IMDB 9.2/10 2013 ‧ Sitcom ‧ 5 seasons</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'rick.html';">DETAILS</button>
+                        </div>
+                        <!-- <div class="movie-list-item">
+                            <img class="movie-list-item-title" src="img/money2.jpg" alt="">
+                            <span class="movie-list-item-name">Money Heist</span>
+                            <p class="movie-list-item-desc">IMDB 8.2/10 2017 ‧ Thriller ‧ 5 seasons</p>
+                            <button class="movie-list-item-button" onclick="location.href = 'money.html';">DETAILS</button>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="movies.js"></script>
+</body>
